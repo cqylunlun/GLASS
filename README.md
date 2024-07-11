@@ -48,7 +48,6 @@ These dataset folders/files follow its original structure.
 ## Run Experiments
 Edit `./shell/run-dataset.sh` to configure the `--datapath`, `--augpath`, `--classes`, and other hyperparameter settings.
 Please modify the argument `--test` to 'ckpt' or 'test' to switch between training and testing.
-These shell scripts give the configuration to train or test models on specific dataset.
 ```
 bash run-dataset.sh
 ```
@@ -57,7 +56,7 @@ bash run-dataset.sh
 ### 1.WFDD ([Downdload link](https://drive.usercontent.google.com/download?id=1P8yfNnfoFsb0Lv-HRzkPQ2nD9qsL--Vk/))
 The Woven Fabric Defect Detection (WFDD) dataset includes 4101 woven fabric images categorized into 4 categories:
 grey cloth, grid cloth, yellow cloth, and pink flower.
-The first three classes are collected from industrial sites of [WEIQIAO Textile](http://www.wqfz.com/en/),
+The first three classes are collected from the industrial sites of [WEIQIAO Textile](http://www.wqfz.com/en/),
 while the 'pink flower' class is gathered from the publicly available
 [Cloth Flaw Dataset](https://tianchi.aliyun.com/dataset/79336?lang=en-us/).
 Each category contains block-shape, pointlike, and line-type defects with pixel-level annotations.
@@ -99,6 +98,4 @@ Please cite the following paper if the code and dataset help your project:
 Thanks for the great inspiration from [SimpleNet](https://github.com/DonaldRR/SimpleNet/).
 
 ## License
-All code in the repo is licensed under the [MIT license](https://mit-license.org/).
-
-The datasets are released under the [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/legalcode/).
+The code and datasets in this repository are licensed under the [MIT license](https://mit-license.org/).
