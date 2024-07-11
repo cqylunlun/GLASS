@@ -1,0 +1,14 @@
+click==8.1.7
+matplotlib==3.8.2
+numpy==1.26.3
+opencv-python-headless==4.10.0.84
+pandas==1.5.2
+pillow==10.2.0
+scikit-image==0.22.0
+scikit-learn==1.4.0
+scipy==1.11.4
+tensorboard==2.15.1
+timm==0.9.12
+torch==2.1.2
+torchvision==0.16.2
+tqdm==4.66.1
