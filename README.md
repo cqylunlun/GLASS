@@ -46,7 +46,7 @@ while the other datasets are used for anomaly detection evaluation.
 These dataset folders/files follow its original structure.
 
 ## Run Experiments
-Edit `./shell/run-dataset.sh` to configure the `--datapath`, `--augpath`, `--classes`, and other hyperparameter settings.
+Edit `./shell/run-dataset.sh` to configure arguments `--datapath`, `--augpath`, `--classes`, and other hyperparameter settings.
 Please modify the argument `--test` to 'ckpt' or 'test' to switch between training and testing.
 ```
 bash run-dataset.sh
@@ -56,7 +56,7 @@ bash run-dataset.sh
 ### 1.WFDD ([Downdload link](https://drive.usercontent.google.com/download?id=1P8yfNnfoFsb0Lv-HRzkPQ2nD9qsL--Vk/))
 The Woven Fabric Defect Detection (WFDD) dataset includes 4101 woven fabric images categorized into 4 categories:
 grey cloth, grid cloth, yellow cloth, and pink flower.
-The first three classes are collected from the industrial sites of [WEIQIAO Textile](http://www.wqfz.com/en/),
+The first three classes are collected from the industrial production sites of [WEIQIAO Textile](http://www.wqfz.com/en/),
 while the 'pink flower' class is gathered from the publicly available
 [Cloth Flaw Dataset](https://tianchi.aliyun.com/dataset/79336?lang=en-us/).
 Each category contains block-shape, pointlike, and line-type defects with pixel-level annotations.
@@ -81,7 +81,7 @@ Each subset contains 320 normal and 946 anomaly samples.
 The foreground masks of normal samples from various datasets are obtained through binarization
 inspired by ([BGAD](https://github.com/xcyao00/BGAD/)).
 If a dataset does not have or require the foreground masks,
-please set the argument `--fg` to '0' in the shell script.
+please set argument `--fg` to '0' in shell script.
 
 ## Citation
 Please cite the following paper if the code and dataset help your project:
