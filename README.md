@@ -47,7 +47,7 @@ These dataset folders/files follow its original structure.
 
 ## Run Experiments
 Edit `./shell/run-dataset.sh` to configure arguments `--datapath`, `--augpath`, `--classes`, and other hyperparameter settings.
-Please modify the argument `--test` to 'ckpt' or 'test' to switch between training and testing.
+Please modify argument `--test` to 'ckpt' / 'test' to toggle between training and testing modes.
 ```
 bash run-dataset.sh
 ```
@@ -79,7 +79,7 @@ Each subset contains 320 normal and 946 anomaly samples.
 
 ### 4.Foreground Mask ([Downdload link](https://drive.usercontent.google.com/download?id=1Fn84QCfMtgBGEDcmY44v97Ci8wwpABK8/))
 The foreground masks of normal samples from various datasets are obtained through binarization
-inspired by ([BGAD](https://github.com/xcyao00/BGAD/)).
+inspired by [BGAD](https://github.com/xcyao00/BGAD/).
 If a dataset does not have or require the foreground masks,
 please set argument `--fg` to '0' in shell script.
 
