@@ -46,7 +46,7 @@ while the other datasets are used for anomaly detection evaluation.
 These dataset folders/files follow its original structure.
 
 ## Run Experiments
-Edit `./shell/run-dataset.sh` to configure arguments `--datapath`, `--augpath`, `--classes`, and other hyperparameter settings.
+Edit `./shell/run-dataset.sh` to configure arguments `--datapath`, `--augpath`, `--classes`, and hyperparameter settings.
 Please modify argument `--test` to 'ckpt' / 'test' to toggle between training and testing modes.
 ```
 bash run-dataset.sh
