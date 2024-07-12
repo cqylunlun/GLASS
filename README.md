@@ -53,7 +53,7 @@ bash run-dataset.sh
 ```
 
 ## Dataset Release
-### 1.WFDD ([Downdload link](https://drive.usercontent.google.com/download?id=1P8yfNnfoFsb0Lv-HRzkPQ2nD9qsL--Vk/))
+### 1.WFDD ([Downdload link](https://drive.google.com/file/d/1P8yfNnfoFsb0Lv-HRzkPQ2nD9qsL--Vk/view?usp=sharing/))
 The Woven Fabric Defect Detection (WFDD) dataset includes 4101 woven fabric images categorized into 4 categories:
 grey cloth, grid cloth, yellow cloth, and pink flower.
 The first three classes are collected from the industrial production sites of [WEIQIAO Textile](http://www.wqfz.com/en/),
@@ -63,21 +63,21 @@ Each category contains block-shape, pointlike, and line-type defects with pixel-
 
 ![](figures/WFDD_samples.png)
 
-### 2.MAD-man ([Downdload link](https://drive.usercontent.google.com/download?id=1HJmw7hSmrS0NMxfAjDltF4cXlN5S96Iz/))
+### 2.MAD-man ([Downdload link](https://drive.google.com/file/d/1HJmw7hSmrS0NMxfAjDltF4cXlN5S96Iz/view?usp=sharing/))
 The MVTec AD-manual (MAD-man) test set is constructed to evaluate weak defect detection.
 It includes samples independently selected by 5 individuals from all 15 categories of MVTec AD.
 Each subset contains 2 normal and 6 anomaly samples per category.
 
 ![](figures/MAD-man_samples.png)
 
-### 3.MAD-sys ([Downdload link](https://drive.usercontent.google.com/download?id=1uLGWmOc4D9PuQawE-2nFS3p6XQzKrVsn/))
+### 3.MAD-sys ([Downdload link](https://drive.google.com/file/d/1uLGWmOc4D9PuQawE-2nFS3p6XQzKrVsn/view?usp=sharing/))
 The MVTec AD-synthesis (MAD-sys) test set is constructed from 5 texture categories of MVTec AD.
 It includes 4 subsets with varying degrees of weak defects, adjusted by the transparency coefficient.
 Each subset contains 320 normal and 946 anomaly samples.
 
 ![](figures/MAD-sys_samples.png)
 
-### 4.Foreground Mask ([Downdload link](https://drive.usercontent.google.com/download?id=1Fn84QCfMtgBGEDcmY44v97Ci8wwpABK8/))
+### 4.Foreground Mask ([Downdload link](https://drive.google.com/file/d/1Fn84QCfMtgBGEDcmY44v97Ci8wwpABK8/view?usp=sharing/))
 The foreground masks of normal samples from various datasets are obtained through binarization
 inspired by [BGAD](https://github.com/xcyao00/BGAD/).
 If a dataset does not have or require the foreground masks,
