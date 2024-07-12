@@ -13,19 +13,19 @@ import glob
 _CLASSNAMES = [
     "carpet",
     "grid",
+    "leather",
     "tile",
     "wood",
-    "leather",
-    "screw",
-    "pill",
-    "capsule",
-    "zipper",
+    "bottle",
     "cable",
+    "capsule",
+    "hazelnut",
+    "metal_nut",
+    "pill",
+    "screw",
     "toothbrush",
     "transistor",
-    "metal_nut",
-    "bottle",
-    "hazelnut",
+    "zipper",
 ]
 
 IMAGENET_MEAN = [0.485, 0.456, 0.406]
