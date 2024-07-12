@@ -6,14 +6,14 @@
 _Qiyu Chen, Huiyuan Luo, Chengkan Lv*, Zhengtao Zhang_
 
 ## Table of Contents
-* [Introduction](#introduction)
-* [Environments](#environments)
-* [Data Preparation](#data-preparation)
-* [Run Experiments](#run-experiments)
-* [Dataset Release](#dataset-release)
-* [Citation](#citation)
-* [Acknowledgements](#acknowledgements)
-* [License](#license)
+* [📖 Introduction](#introduction)
+* [🔧 Environments](#environments)
+* [📊 Data Preparation](#data-preparation)
+* [🚀 Run Experiments](#run-experiments)
+* [📂 Dataset Release](#dataset-release)
+* [🔗 Citation](#citation)
+* [🙏 Acknowledgements](#acknowledgements)
+* [📜 License](#license)
 
 ## Introduction
 This repository contains source code for GLASS implemented with PyTorch.
