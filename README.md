@@ -98,4 +98,4 @@ Please cite the following paper if the code and dataset help your project:
 Thanks for the great inspiration from [SimpleNet](https://github.com/DonaldRR/SimpleNet/).
 
 ## License
-The code and datasets in this repository are licensed under the [MIT license](https://mit-license.org/).
+The code and dataset in this repository are licensed under the [MIT license](https://mit-license.org/).
