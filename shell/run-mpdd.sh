@@ -1,7 +1,7 @@
 datapath=/root/dataset/MPDD
 augpath=/root/dataset/dtd/images
 classes=('bracket_black' 'bracket_brown' 'bracket_white' 'connector' 'metal_plate' 'tubes')
-dataset_flags=($(for dataset in "${classes[@]}"; do echo '-d '"${dataset}"; done))
+flags=($(for class in "${classes[@]}"; do echo '-d '"${class}"; done))
 
 cd ..
 python main.py \
@@ -34,4 +34,4 @@ python main.py \
     --rand_aug 1 \
     --batch_size 8 \
     --resize 288 \
-    --imagesize 288 "${dataset_flags[@]}" mpdd $datapath $augpath
+    --imagesize 288 "${flags[@]}" mpdd $datapath $augpath

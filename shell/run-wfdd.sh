@@ -1,7 +1,7 @@
 datapath=/root/dataset/WFDD
 augpath=/root/dataset/dtd/images
 classes=('grey_cloth' 'grid_cloth' 'yellow_cloth' 'pink_flower')
-dataset_flags=($(for dataset in "${classes[@]}"; do echo '-d '"${dataset}"; done))
+flags=($(for class in "${classes[@]}"; do echo '-d '"${class}"; done))
 
 cd ..
 python main.py \
@@ -34,4 +34,4 @@ python main.py \
     --rand_aug 1 \
     --batch_size 8 \
     --resize 288 \
-    --imagesize 288 "${dataset_flags[@]}" wfdd $datapath $augpath
+    --imagesize 288 "${flags[@]}" wfdd $datapath $augpath

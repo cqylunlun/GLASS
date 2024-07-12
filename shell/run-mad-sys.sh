@@ -1,7 +1,7 @@
 datapath=/root/dataset/MAD-sys/Beta_0.1
 augpath=/root/dataset/dtd/images
 classes=('carpet' 'grid' 'leather' 'tile' 'wood')
-dataset_flags=($(for dataset in "${classes[@]}"; do echo '-d '"${dataset}"; done))
+flags=($(for class in "${classes[@]}"; do echo '-d '"${class}"; done))
 
 cd ..
 python main.py \
@@ -34,4 +34,4 @@ python main.py \
     --rand_aug 1 \
     --batch_size 8 \
     --resize 288 \
-    --imagesize 288 "${dataset_flags[@]}" mvtec $datapath $augpath
+    --imagesize 288 "${flags[@]}" mvtec $datapath $augpath

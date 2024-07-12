@@ -1,7 +1,7 @@
 datapath=/root/dataset/VisA
 augpath=/root/dataset/dtd/images
 classes=('candle' 'capsules' 'cashew' 'chewinggum' 'fryum' 'macaroni1' 'macaroni2' 'pcb1' 'pcb2' 'pcb3' 'pcb4' 'pipe_fryum')
-dataset_flags=($(for dataset in "${classes[@]}"; do echo '-d '"${dataset}"; done))
+flags=($(for class in "${classes[@]}"; do echo '-d '"${class}"; done))
 
 cd ..
 python main.py \
@@ -34,4 +34,4 @@ python main.py \
     --rand_aug 1 \
     --batch_size 8 \
     --resize 288 \
-    --imagesize 288 "${dataset_flags[@]}" visa $datapath $augpath
+    --imagesize 288 "${flags[@]}" visa $datapath $augpath
