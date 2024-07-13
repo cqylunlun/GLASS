@@ -75,9 +75,9 @@ The MVTec AD-synthesis (MAD-sys) test set is constructed from 5 texture categori
 It includes 5 subsets with varying degrees of weak defects, adjusted by the transparency coefficient.
 Each subset contains 320 normal and 946 anomaly samples.
 
-_Note that due to the weak defects under $\beta=0.9$ being very close to normal,
+_Note that due to weak defects under β=0.9 being very close to normal,
 we did not use this fifth subset in our study.
-However, we have chosen to release this subset,
+However, we choose to release this subset,
 sincerely hoping that future work can further address this challenge._
 
 ![](figures/MAD-sys_samples.png)
