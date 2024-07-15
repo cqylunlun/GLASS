@@ -5,6 +5,8 @@
 
 _Qiyu Chen, Huiyuan Luo, Chengkan Lv*, Zhengtao Zhang_
 
+[Paper link](https://arxiv.org/abs/2407.09359)
+
 ## Table of Contents
 * [📖 Introduction](#introduction)
 * [🔧 Environments](#environments)
@@ -72,13 +74,13 @@ Each subset contains 2 normal and 6 anomaly samples per category.
 
 ### 3.MAD-sys ([Downdload link](https://drive.google.com/file/d/1uLGWmOc4D9PuQawE-2nFS3p6XQzKrVsn/view?usp=sharing/))
 The MVTec AD-synthesis (MAD-sys) test set is constructed from 5 texture categories of MVTec AD.
-It includes 5 subsets with varying degrees of weak defects, adjusted by the transparency coefficient.
+It includes 4 subsets with varying degrees of weak defects, adjusted by the transparency coefficient.
 Each subset contains 320 normal and 946 anomaly samples.
 
-_Note that due to weak defects under β=0.9 being very close to normal,
-we did not use this fifth subset in our study.
+_"Note that due to weak defects under &beta;=0.9 being very close to normal,
+we did not use the 5<sup>th</sup> subset in our study.
 However, we choose to release this subset,
-sincerely hoping that future work can further address this challenge._
+sincerely hoping that future work can further address this challenge."_
 
 ![](figures/MAD-sys_samples.png)
 
@@ -95,6 +97,7 @@ Please cite the following paper if the code and dataset help your project:
 @article{chen2024unified,
   title={A Unified Anomaly Synthesis Strategy with Gradient Ascent for Industrial Anomaly Detection and Localization},
   author={Chen, Qiyu and Luo, Huiyuan and Lv, Chengkan and Zhang, Zhengtao},
+  journal={arXiv preprint arXiv:2407.09359},
   year={2024}
 }
 ```
