@@ -61,7 +61,7 @@ grey cloth, grid cloth, yellow cloth, and pink flower.
 The first three classes are collected from the industrial production sites of [WEIQIAO Textile](http://www.wqfz.com/en/),
 while the 'pink flower' class is gathered from the publicly available
 [Cloth Flaw Dataset](https://tianchi.aliyun.com/dataset/79336?lang=en-us/).
-Each category contains block-shape, pointlike, and line-type defects with pixel-level annotations.
+Each category contains block-shape, point-like, and line-type defects with pixel-level annotations.
 
 ![](figures/WFDD_samples.png)
 
