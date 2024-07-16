@@ -50,9 +50,15 @@ These dataset folders/files follow its original structure.
 ## Run Experiments
 Edit `./shell/run-dataset.sh` to configure arguments `--datapath`, `--augpath`, `--classes`, and hyperparameter settings.
 Please modify argument `--test` to 'ckpt' / 'test' to toggle between training and testing modes.
+
 ```
 bash run-dataset.sh
 ```
+
+_"Note that 'dataset' refers to all datasets.
+Currently, the `shell` folder contains scripts for six datasets,
+such as `run-mvtec.sh` for MVTec AD. If you want to train your own dataset,
+please create a new `run-*.sh` file."_
 
 ## Dataset Release
 ### 1.WFDD ([Downdload link](https://drive.google.com/file/d/1P8yfNnfoFsb0Lv-HRzkPQ2nD9qsL--Vk/view?usp=sharing/))
