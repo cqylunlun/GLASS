@@ -55,7 +55,7 @@ Please modify argument `--test` to 'ckpt' / 'test' to toggle between training an
 bash run-dataset.sh
 ```
 
-_"Note that 'dataset' refers to all datasets.
+_"Note that 'dataset' refers to any dataset.
 Currently, the `shell` folder contains scripts for six datasets,
 such as `run-mvtec.sh` for MVTec AD. If you want to train your own dataset,
 please create a new `run-*.sh` file."_
