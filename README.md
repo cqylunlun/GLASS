@@ -43,7 +43,7 @@ The public datasets employed in the paper are:
 - VisA ([Download link](https://github.com/amazon-science/spot-diff/))
 - MPDD ([Download link](https://github.com/stepanje/MPDD/))
 
-The DTD dataset is essential for local anomaly synthesis,
+DTD is an auxiliary texture dataset used for data augmentation in GLASS,
 while the other datasets are used for anomaly detection evaluation.
 These dataset folders/files follow its original structure.
 
