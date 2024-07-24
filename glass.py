@@ -268,7 +268,7 @@ class GLASS(torch.nn.Module):
                         self.c = batch_mean
                     else:
                         self.c += batch_mean
-                    self.c /= len(training_data)
+                self.c /= len(training_data)
 
             pbar_str, pt, pf = self._train_discriminator(training_data, i_epoch, pbar, pbar_str1)
             update_state_dict()
