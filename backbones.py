@@ -1,21 +1,10 @@
 import torchvision.models as models
 import timm
 
-
-def load_ref_wrn50():
-    import resnet
-    return resnet.wide_resnet50_2(True)
-
-
 _BACKBONES = {
-    "cait_s24_224": "cait.cait_S24_224(True)",
-    "cait_xs24": "cait.cait_XS24(True)",
     "alexnet": "models.alexnet(pretrained=True)",
-    "bninception": 'pretrainedmodels.__dict__["bninception"]'
-                   '(pretrained="imagenet", num_classes=1000)',
     "resnet18": "models.resnet18(pretrained=True)",
     "resnet50": "models.resnet50(pretrained=True)",
-    "mc3_resnet50": "load_mc3_rn50()",
     "resnet101": "models.resnet101(pretrained=True)",
     "resnext101": "models.resnext101_32x8d(pretrained=True)",
     "resnet200": 'timm.create_model("resnet200", pretrained=True)',
@@ -32,7 +21,6 @@ _BACKBONES = {
     "vgg19": "models.vgg19(pretrained=True)",
     "vgg19_bn": "models.vgg19_bn(pretrained=True)",
     "wideresnet50": "models.wide_resnet50_2(pretrained=True)",
-    "ref_wideresnet50": "load_ref_wrn50()",
     "wideresnet101": "models.wide_resnet101_2(pretrained=True)",
     "mnasnet_100": 'timm.create_model("mnasnet_100", pretrained=True)',
     "mnasnet_a1": 'timm.create_model("mnasnet_a1", pretrained=True)',
