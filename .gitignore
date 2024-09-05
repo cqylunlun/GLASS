@@ -1,0 +1,42 @@
+# GLASS project
+results/
+
+# build
+*.egg
+*.wheel
+*.build
+*.pyc
+*.pyo
+
+# virtual env
+venv/
+
+# log
+*.log
+
+# temporary files
+*.tmp
+*.swp
+*.bak
+*.tmp
+*.swp
+*.bak
+
+# IDE profiles
+.idea/
+.vscode/
+
+# private keys
+*.pem
+*.key
+*.crt
+
+# virtual machine
+*.vmss
+*.vmem
+*.vdi
+*.iso
+
+# system
+.DS_Store
+Thumbs.db
