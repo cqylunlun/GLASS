@@ -92,10 +92,19 @@ class VisADataset(torch.utils.data.Dataset):
         self.imgsize = imagesize
         self.imagesize = (3, self.imgsize, self.imgsize)
         self.classname = classname
-
         self.dataset_name = dataset_name
-        self.first_read = 1
-        self.class_fg = fg
+
+        xlsx_path = './datasets/excel/' + self.dataset_name + '_distribution.xlsx'
+        if self.fg == 2:  # choose by file
+            try:
+                df = pd.read_excel(xlsx_path)
+                self.class_fg = df.loc[df['Class'] == self.dataset_name + '_' + classname, 'Foreground'].values[0]
+            except:
+                self.class_fg = 1
+        elif self.fg == 1:  # with foreground mask
+            self.class_fg = 1
+        else:  # without foreground mask
+            self.class_fg = 0
 
         self.imgpaths_per_class, self.data_to_iterate = self.get_image_data()
         self.anomaly_source_paths = sorted(1 * glob.glob(anomaly_source_path + "/*/*.jpg") +
@@ -164,20 +173,6 @@ class VisADataset(torch.utils.data.Dataset):
                 aug = transform_aug(aug)
             else:
                 aug = self.transform_img(aug)
-
-            xlsx_path = './datasets/excel/' + self.dataset_name + '_distribution.xlsx'
-            if self.fg == 2:  # choose by file
-                try:
-                    if self.first_read:
-                        df = pd.read_excel(xlsx_path)
-                        self.class_fg = df.loc[df['Class'] == self.dataset_name + '_' + classname, 'Foreground'].values[0]
-                        self.first_read = 0
-                except:
-                    self.class_fg = 1
-            elif self.fg == 1:  # with foreground mask
-                self.class_fg = 1
-            else:  # without foreground mask
-                self.class_fg = 0
 
             if self.class_fg:
                 fgmask_path = image_path.split(classname)[0] + 'fg_mask/' + classname + '/' + os.path.split(image_path)[-1]
