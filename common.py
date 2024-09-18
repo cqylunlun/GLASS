@@ -12,7 +12,7 @@ class Preprocessing(torch.nn.Module):
         self.output_dim = output_dim
 
         self.preprocessing_modules = torch.nn.ModuleList()
-        for input_dim in input_dims:
+        for _ in input_dims:
             module = MeanMapper(output_dim)
             self.preprocessing_modules.append(module)
 
@@ -90,28 +90,8 @@ class NetworkFeatureAggregator(torch.nn.Module):
         self.outputs = {}
 
         for extract_layer in layers_to_extract_from:
-            forward_hook = ForwardHook(
-                self.outputs, extract_layer, layers_to_extract_from[-1]
-            )
-            if "." in extract_layer:
-                extract_idx, extract_block = extract_layer.split(".")
-                network_layer = backbone.__dict__["_modules"][extract_block]
-                if extract_idx.isnumeric():
-                    extract_idx = int(extract_idx)
-                    network_layer = network_layer[extract_idx]
-                else:
-                    network_layer = network_layer.__dict__["_modules"][extract_idx]
-            else:
-                network_layer = backbone.__dict__["_modules"][extract_layer]
+            self.register_hook(extract_layer)
 
-            if isinstance(network_layer, torch.nn.Sequential):
-                self.backbone.hook_handles.append(
-                    network_layer[-1].register_forward_hook(forward_hook)
-                )
-            else:
-                self.backbone.hook_handles.append(
-                    network_layer.register_forward_hook(forward_hook)
-                )
         self.to(self.device)
 
     def forward(self, images, eval=True):
@@ -132,6 +112,27 @@ class NetworkFeatureAggregator(torch.nn.Module):
         _output = self(_input)
         return [_output[layer].shape[1] for layer in self.layers_to_extract_from]
 
+    def register_hook(self, layer_name):
+        module = self.find_module(self.backbone, layer_name)
+        if module is not None:
+            forward_hook = ForwardHook(self.outputs, layer_name, self.layers_to_extract_from[-1])
+            if isinstance(module, torch.nn.Sequential):
+                hook = module[-1].register_forward_hook(forward_hook)
+            else:
+                hook = module.register_forward_hook(forward_hook)
+            self.backbone.hook_handles.append(hook)
+        else:
+            raise ValueError(f"Module {layer_name} not found in the model")
+    
+    def find_module(self, model, module_name):
+        for name, module in model.named_modules():
+            if name == module_name:
+                return module
+            elif '.' in module_name:
+                father, child = module_name.split('.', 1)
+                if name == father:
+                    return self.find_module(module, child)
+        return None
 
 class ForwardHook:
     def __init__(self, hook_dict, layer_name: str, last_layer_to_extract: str):
@@ -144,7 +145,6 @@ class ForwardHook:
     def __call__(self, module, input, output):
         self.hook_dict[self.layer_name] = output
         return None
-
 
 class LastLayerToExtractReachedException(Exception):
     pass
