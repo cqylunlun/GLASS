@@ -76,7 +76,7 @@ def compute_pro(masks, amaps, num_th=200):
         fp_pixels = np.logical_and(inverse_masks, binary_amaps).sum()
         fpr = fp_pixels / inverse_masks.sum()
 
-        df = df.append({"pro": np.mean(pros), "fpr": fpr, "threshold": th}, ignore_index=True)
+        df = pd.concat([df, pd.DataFrame({"pro": np.mean(pros), "fpr": fpr, "threshold": th}, index=[0])])
 
     df = df[df["fpr"] < 0.3]
     df["fpr"] = (df["fpr"] - df["fpr"].min()) / (df["fpr"].max() - df["fpr"].min() + 1e-10)
