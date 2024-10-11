@@ -36,16 +36,22 @@ Experiments are conducted on NVIDIA Tesla A800 (80GB).
 Same GPU and package version are recommended. 
 
 ## Data Preparation
-The public datasets employed in the paper are:
+The public datasets employed in the paper are listed below.
+DTD is an auxiliary texture dataset used for data augmentation in GLASS,
+while the other datasets are used for anomaly detection evaluation.
+These dataset folders/files follow its original structure.
 
 - DTD ([Download link](https://www.robots.ox.ac.uk/~vgg/data/dtd/))
 - MVTec AD ([Download link](https://www.mvtec.com/company/research/datasets/mvtec-ad/))
 - VisA ([Download link](https://github.com/amazon-science/spot-diff/))
 - MPDD ([Download link](https://github.com/stepanje/MPDD/))
 
-DTD is an auxiliary texture dataset used for data augmentation in GLASS,
-while the other datasets are used for anomaly detection evaluation.
-These dataset folders/files follow its original structure.
+We also release the model weights of GLASS-j on MVTec AD reported in the paper.
+If you want to further explore based on these models,
+you need to download the results folder
+([Download link](https://drive.google.com/drive/folders/1Hjlr-CcXwnhWfrWUCJJCooBI_pMP4N1C?usp=sharing))
+and move it to the root directory of this repository.
+Note that you should clear the existing results folder before moving.
 
 ## Run Experiments
 Edit `./shell/run-dataset.sh` to configure arguments `--datapath`, `--augpath`, `--classes`, and hyperparameter settings.
