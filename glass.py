@@ -162,7 +162,7 @@ class GLASS(torch.nn.Module):
             _features = _features.reshape(
                 _features.shape[0], patch_dims[0], patch_dims[1], *_features.shape[2:]
             )
-            _features = _features.permute(0, -3, -2, -1, 1, 2)
+            _features = _features.permute(0, 3, 4, 5, 1, 2)
             perm_base_shape = _features.shape
             _features = _features.reshape(-1, *_features.shape[-2:])
             _features = F.interpolate(
@@ -175,7 +175,7 @@ class GLASS(torch.nn.Module):
             _features = _features.reshape(
                 *perm_base_shape[:-2], ref_num_patches[0], ref_num_patches[1]
             )
-            _features = _features.permute(0, -2, -1, 1, 2, 3)
+            _features = _features.permute(0, 4, 5, 1, 2, 3)
             _features = _features.reshape(len(_features), -1, *_features.shape[-3:])
             patch_features[i] = _features
 
