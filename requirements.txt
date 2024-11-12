@@ -1,6 +1,9 @@
 click==8.1.7
 matplotlib==3.8.2
 numpy==1.26.3
+onnx==1.16.2
+onnxruntime-gpu==1.18.1
+onnxsim==0.4.36
 opencv-python-headless==4.10.0.84
 pandas==1.5.2
 pillow==10.2.0
