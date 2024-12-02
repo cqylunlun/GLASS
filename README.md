@@ -9,7 +9,8 @@
 
 _Qiyu Chen, Huiyuan Luo, Chengkan Lv*, Zhengtao Zhang_
 
-[Paper link](https://arxiv.org/abs/2407.09359)
+[Springer DOI Link](https://link.springer.com/chapter/10.1007/978-3-031-72855-6_3) & 
+[ArXiv Preprint Link](https://arxiv.org/abs/2407.09359)
 
 ## Table of Contents
 * [📖 Introduction](#introduction)
@@ -110,11 +111,13 @@ please set argument `--fg` to '0' in shell script.
 Please cite the following paper if the code and dataset help your project:
 
 ```bibtex
-@article{chen2024unified,
-  title={A Unified Anomaly Synthesis Strategy with Gradient Ascent for Industrial Anomaly Detection and Localization},
+@inproceedings{chen2025unified,
+  title={A unified anomaly synthesis strategy with gradient ascent for industrial anomaly detection and localization},
   author={Chen, Qiyu and Luo, Huiyuan and Lv, Chengkan and Zhang, Zhengtao},
-  journal={arXiv preprint arXiv:2407.09359},
-  year={2024}
+  booktitle={European Conference on Computer Vision},
+  pages={37--54},
+  year={2025},
+  organization={Springer}
 }
 ```
 
