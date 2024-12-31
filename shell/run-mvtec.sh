@@ -1,5 +1,5 @@
-datapath=/root/dataset/MVTec
-augpath=/root/dataset/dtd/images
+datapath=/root/cqy/dataset/MVTec
+augpath=/root/cqy/dataset/dtd/images
 classes=('carpet' 'grid' 'leather' 'tile' 'wood' 'bottle' 'cable' 'capsule' 'hazelnut' 'metal_nut' 'pill' 'screw' 'toothbrush' 'transistor' 'zipper')
 flags=($(for class in "${classes[@]}"; do echo '-d '"${class}"; done))
 

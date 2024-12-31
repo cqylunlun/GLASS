@@ -1,5 +1,5 @@
-datapath=/root/dataset/MAD-sys/Beta_0.1
-augpath=/root/dataset/dtd/images
+datapath=/root/cqy/dataset/MAD-sys/Beta_0.1
+augpath=/root/cqy/dataset/dtd/images
 classes=('carpet' 'grid' 'leather' 'tile' 'wood')
 flags=($(for class in "${classes[@]}"; do echo '-d '"${class}"; done))
 

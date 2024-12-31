@@ -1,5 +1,5 @@
-datapath=/root/dataset/VisA
-augpath=/root/dataset/dtd/images
+datapath=/root/cqy/dataset/VisA
+augpath=/root/cqy/dataset/dtd/images
 classes=('candle' 'capsules' 'cashew' 'chewinggum' 'fryum' 'macaroni1' 'macaroni2' 'pcb1' 'pcb2' 'pcb3' 'pcb4' 'pipe_fryum')
 flags=($(for class in "${classes[@]}"; do echo '-d '"${class}"; done))
 

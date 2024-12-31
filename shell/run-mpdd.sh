@@ -1,5 +1,5 @@
-datapath=/root/dataset/MPDD
-augpath=/root/dataset/dtd/images
+datapath=/root/cqy/dataset/MPDD
+augpath=/root/cqy/dataset/dtd/images
 classes=('bracket_black' 'bracket_brown' 'bracket_white' 'connector' 'metal_plate' 'tubes')
 flags=($(for class in "${classes[@]}"; do echo '-d '"${class}"; done))
 
