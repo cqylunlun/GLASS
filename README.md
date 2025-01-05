@@ -1,8 +1,9 @@
 # GLASS
 
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/a-unified-anomaly-synthesis-strategy-with/anomaly-detection-on-mvtec-ad)](https://paperswithcode.com/sota/anomaly-detection-on-mvtec-ad?p=a-unified-anomaly-synthesis-strategy-with)  
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/a-unified-anomaly-synthesis-strategy-with/anomaly-detection-on-mvtec-ad)](https://paperswithcode.com/sota/anomaly-detection-on-mvtec-ad?p=a-unified-anomaly-synthesis-strategy-with)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/a-unified-anomaly-synthesis-strategy-with/anomaly-detection-on-mpdd)](https://paperswithcode.com/sota/anomaly-detection-on-mpdd?p=a-unified-anomaly-synthesis-strategy-with)  
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/a-unified-anomaly-synthesis-strategy-with/anomaly-detection-on-wfdd)](https://paperswithcode.com/sota/anomaly-detection-on-wfdd?p=a-unified-anomaly-synthesis-strategy-with)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/a-unified-anomaly-synthesis-strategy-with/anomaly-detection-on-visa)](https://paperswithcode.com/sota/anomaly-detection-on-visa?p=a-unified-anomaly-synthesis-strategy-with)
 
 ![](figures/GLASS_schematic.png)
 
