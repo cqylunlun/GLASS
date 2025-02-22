@@ -1,5 +1,6 @@
 click==8.1.7
 cuda-python==11.8.2
+imgaug==0.4.0
 matplotlib==3.8.2
 numpy==1.26.3
 onnx==1.16.2
