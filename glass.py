@@ -493,27 +493,18 @@ class GLASS(torch.nn.Module):
 
     def _evaluate(self, images, scores, segmentations, labels_gt, masks_gt, name, path='training'):
         scores = np.squeeze(np.array(scores))
-        img_min_scores = min(scores)
-        img_max_scores = max(scores)
-        norm_scores = (scores - img_min_scores) / (img_max_scores - img_min_scores + 1e-10)
-
-        image_scores = metrics.compute_imagewise_retrieval_metrics(norm_scores, labels_gt, path)
+        image_scores = metrics.compute_imagewise_retrieval_metrics(scores, labels_gt, path)
         image_auroc = image_scores["auroc"]
         image_ap = image_scores["ap"]
 
         if len(masks_gt) > 0:
             segmentations = np.array(segmentations)
-            min_scores = np.min(segmentations)
-            max_scores = np.max(segmentations)
-            norm_segmentations = (segmentations - min_scores) / (max_scores - min_scores + 1e-10)
-
-            pixel_scores = metrics.compute_pixelwise_retrieval_metrics(norm_segmentations, masks_gt, path)
+            pixel_scores = metrics.compute_pixelwise_retrieval_metrics(segmentations, masks_gt, path)
             pixel_auroc = pixel_scores["auroc"]
             pixel_ap = pixel_scores["ap"]
             if path == 'eval':
                 try:
-                    pixel_pro = metrics.compute_pro(np.squeeze(np.array(masks_gt)), norm_segmentations)
-
+                    pixel_pro = metrics.compute_pro(np.squeeze(np.array(masks_gt)), segmentations)
                 except:
                     pixel_pro = 0.
             else:
@@ -531,7 +522,7 @@ class GLASS(torch.nn.Module):
             defect = utils.torch_format_2_numpy_img(defects[i])
             target = utils.torch_format_2_numpy_img(targets[i])
 
-            mask = cv2.cvtColor(cv2.resize(norm_segmentations[i], (defect.shape[1], defect.shape[0])),
+            mask = cv2.cvtColor(cv2.resize(segmentations[i], (defect.shape[1], defect.shape[0])),
                                 cv2.COLOR_GRAY2BGR)
             mask = (mask * 255).astype('uint8')
             mask = cv2.applyColorMap(mask, cv2.COLORMAP_JET)
