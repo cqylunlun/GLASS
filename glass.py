@@ -509,7 +509,6 @@ class GLASS(torch.nn.Module):
                     pixel_pro = 0.
             else:
                 pixel_pro = 0.
-
         else:
             pixel_auroc = -1.
             pixel_ap = -1.
