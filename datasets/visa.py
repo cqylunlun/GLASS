@@ -60,6 +60,7 @@ class VisADataset(torch.utils.data.Dataset):
             std=0.1,
             fg=0,
             rand_aug=1,
+            downsampling=8,
             scale=0,
             batch_size=8,
             **kwargs,
@@ -88,6 +89,7 @@ class VisADataset(torch.utils.data.Dataset):
         self.std = std
         self.fg = fg
         self.rand_aug = rand_aug
+        self.downsampling = downsampling
         self.resize = resize if self.distribution != 1 else [resize, resize]
         self.imgsize = imagesize
         self.imagesize = (3, self.imgsize, self.imgsize)
@@ -179,7 +181,7 @@ class VisADataset(torch.utils.data.Dataset):
                 mask_fg = PIL.Image.open(fgmask_path)
                 mask_fg = torch.ceil(self.transform_mask(mask_fg)[0])
 
-            mask_all = perlin_mask(image.shape, self.imgsize // 8, 0, 6, mask_fg, 1)
+            mask_all = perlin_mask(image.shape, self.imgsize // self.downsampling, 0, 6, mask_fg, 1)
             mask_s = torch.from_numpy(mask_all[0])
             mask_l = torch.from_numpy(mask_all[1])
 

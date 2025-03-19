@@ -138,6 +138,7 @@ def net(
 @click.option("--std", default=0.1, type=float)
 @click.option("--fg", default=1, type=int)
 @click.option("--rand_aug", default=1, type=int)
+@click.option("--downsampling", default=8, type=int)
 @click.option("--augment", is_flag=True)
 def dataset(
         name,
@@ -162,6 +163,7 @@ def dataset(
         std,
         fg,
         rand_aug,
+        downsampling,
         augment,
 ):
     _DATASETS = {"mvtec": ["datasets.mvtec", "MVTecDataset"], "visa": ["datasets.visa", "VisADataset"],
@@ -217,6 +219,7 @@ def dataset(
                     std=std,
                     fg=fg,
                     rand_aug=rand_aug,
+                    downsampling=downsampling,
                     augment=augment,
                     batch_size=batch_size,
                 )
