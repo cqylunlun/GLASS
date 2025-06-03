@@ -33,10 +33,10 @@ particularly for weak defects that resemble normal regions.
 This repository also contains the self-built datasets (WFDD, MAD-man, and MAD-sys) proposed in our paper.
 Here, we present a brief summary of GLASS's performance across several benchmark datasets.
 
-|   GLASS   | MVTec AD |  VisA   |  MPDD   |  WFDD   |
-|:---------:|:--------:|:-------:|:-------:|:-------:|
-| I-AUROC   |   99.9   |  98.8   |  99.6   |  100    |
-| P-AUROC   |   99.3   |  98.8   |  99.4   |  98.9   |
+|   GLASS   | MVTec AD  |   VisA   |   MPDD   |   WFDD   |
+|:---------:|:---------:|:--------:|:--------:|:--------:|
+| I-AUROC   |   99.9%   |  98.8%   |  99.6%   |   100%   |
+| P-AUROC   |   99.3%   |  98.8%   |  99.4%   |  98.9%   |
 
 ## Environments
 Create a new conda environment and install required packages.
