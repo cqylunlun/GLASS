@@ -33,35 +33,10 @@ particularly for weak defects that resemble normal regions.
 This repository also contains the self-built datasets (WFDD, MAD-man, and MAD-sys) proposed in our paper.
 Here, we present a brief summary of GLASS's performance across several benchmark datasets.
 
-<div style="margin: 0 auto; width: max-content;">
-  <table style="border-collapse: collapse; table-layout: fixed; width: 500px; text-align: center;">
-    <thead>
-      <tr>
-        <th style="width: 100px;">GLASS</th>
-        <th style="width: 100px;">MVTec AD</th>
-        <th style="width: 100px;">VisA</th>
-        <th style="width: 100px;">MPDD</th>
-        <th style="width: 100px;">WFDD</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>I-AUROC</td>
-        <td>99.9</td>
-        <td>98.8</td>
-        <td>99.6</td>
-        <td>100</td>
-      </tr>
-      <tr>
-        <td>P-AUROC</td>
-        <td>99.3</td>
-        <td>98.8</td>
-        <td>99.4</td>
-        <td>98.9</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+|   GLASS   | MVTec AD |  VisA   |  MPDD   |  WFDD   |
+|:---------:|:--------:|:-------:|:-------:|:-------:|
+| I-AUROC   |   99.9   |  98.8   |  99.6   |  100    |
+| P-AUROC   |   99.3   |  98.8   |  99.4   |  98.9   |
 
 ## Environments
 Create a new conda environment and install required packages.
